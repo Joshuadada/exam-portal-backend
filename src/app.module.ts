@@ -4,8 +4,8 @@ import { APP_GUARD } from '@nestjs/core';
 import { DatabaseModule } from './database/database.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { UsersModule } from './modules/users/users.module';
-//import { MarkingGuidesModule } from './modules/marking-guides/marking-guides.module';
-//import { MarkingModule } from './modules/marking/marking.module';
+import { MarkingGuidesModule } from './modules/marking-guides/marking-guides.module';
+import { MarkingModule } from './modules/marking/marking.module';
 import { JwtAuthGuard } from './common/guards/jwt-auth.guard';
 import databaseConfig from './config/database.config';
 import anthropicConfig from './config/anthropic.config';
@@ -20,8 +20,8 @@ import appConfig from './config/app.config';
     DatabaseModule,
     AuthModule,
     UsersModule,
-    //MarkingGuidesModule,
-    //MarkingModule,
+    MarkingGuidesModule,
+    MarkingModule,
   ],
   providers: [
     {
